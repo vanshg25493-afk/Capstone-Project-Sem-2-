@@ -69,33 +69,8 @@ https://fakestoreapi.com
 	•	JavaScript (ES6+)
 	•	HTML5
 	•	CSS3
-	•	Tailwind CSS
-	•	Fetch API
-	•	React Hooks (useState, useEffect)
 
 ⸻
-
-⚙️ Project Structure
-src/
-
- ├── components/
- │    ├── Navbar.jsx
- │    ├── ProductCard.jsx
- │    ├── SearchBar.jsx
- │    ├── FilterPanel.jsx
- │    ├── SortDropdown.jsx
- │    └── Favorites.jsx
- │
- ├── pages/
- │    ├── Home.jsx
- │    ├── ProductDetails.jsx
- │    └── FavoritesPage.jsx
- │
- ├── services/
- │    └── api.js
- │
- ├── App.js
- └── main.jsx
 
 🧠 Data Handling Logic
 	•	Product data is fetched using the Fetch API
