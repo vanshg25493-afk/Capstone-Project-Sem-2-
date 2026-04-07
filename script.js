@@ -1,6 +1,33 @@
 let allProducts = [];
 let filteredProducts = [];
 
+function updateProducts() {
+  const searchValue = document.getElementById("search").value.toLowerCase();
+  const categoryValue = document.getElementById("category").value;
+  const sortValue = document.getElementById("sort").value;
+
+  let result = [...allProducts];
+
+  // 🔍 Search
+  result = result.filter(p =>
+    p.title.toLowerCase().includes(searchValue)
+  );
+
+  // 📂 Category filter
+  if (categoryValue !== "all") {
+    result = result.filter(p => p.category === categoryValue);
+  }
+
+  // 🔃 Sort
+  if (sortValue === "low") {
+    result.sort((a, b) => a.price - b.price);
+  } else if (sortValue === "high") {
+    result.sort((a, b) => b.price - a.price);
+  }
+
+  showProducts(result);
+}
+
 // Fetch products
 async function fetchProducts() {
   const res = await fetch("https://fakestoreapi.com/products");
